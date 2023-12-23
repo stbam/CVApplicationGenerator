@@ -1,12 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App.jsx";
+import App from "./Generalinfo.jsx";
 import Education from "./Education.jsx";
 import Experience from "./Experience.jsx";
 import Page from "./Page.jsx";
 import "./index.css";
 
+
+
 ReactDOM.createRoot(document.getElementById("root")).render(
+ 
+
   <React.StrictMode>
     <div className="main-container">
       <div className="input-section">
@@ -16,7 +20,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       </div>
 
       <div className="output-section">
-        <Page />
+        <Page/>
       </div>
     </div>
   </React.StrictMode>,

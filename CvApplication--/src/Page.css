@@ -3,19 +3,18 @@
   background-color: white;
   height: 100vh;
   border-radius: 10px;
- /* margin: 20px;*/
-
+  /* margin: 20px;*/
 }
-.general-info{
-    background-color:#0e374e ;
-    padding: 15px;
-    color: white;
+.general-info {
+  background-color: #0e374e;
+  padding: 15px;
+  color: white;
 }
-.user{
-    text-align: center;
+.user {
+  text-align: center;
 }
-.personal-info{
-    display: flex;
-    justify-content: center;
-    gap: 10px;
+.personal-info {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
