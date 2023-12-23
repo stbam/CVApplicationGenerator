@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./Generalinfo.jsx";
+import GeneralInfo from "./Generalinfo.jsx";
 import Education from "./Education.jsx";
 import Experience from "./Experience.jsx";
 import Page from "./Page.jsx";
@@ -14,7 +14,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <div className="main-container">
       <div className="input-section">
-        <App />
+        <GeneralInfo />
         <Education />
         <Experience />
       </div>
