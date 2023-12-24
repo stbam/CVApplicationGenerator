@@ -1,11 +1,12 @@
 import { useState } from "react";
-
 import "./App.css";
 
-function GeneralInfo() {
-  const [inputValue, setInputValue] = useState("");
-  const onChangeHandle =(event)=>{
-    setInputValue(event.target.value)
+function GeneralInfo({ inputValue, onInputChange }) {
+  
+
+  const onChangeHandle =(e)=>{
+    const newValue = e.target.value;
+    onInputChange(newValue);
   }
 
   //A section to add general information like name, email and phone number.
@@ -16,7 +17,8 @@ function GeneralInfo() {
           <h1>Personal Details </h1>
           <div>
             <h2>Name:{inputValue}</h2>
-            <input type="text" className="input" value={inputValue} onChange={onChangeHandle} />
+            <input type="text" className="input" value={inputValue} 
+            onChange={onChangeHandle} />
           </div>
 
           <div>
