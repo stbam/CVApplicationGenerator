@@ -37,10 +37,40 @@ const name=inputValue;
 
         <div className="container">
         <h1 className="sub-title">Professional Experience</h1>
+              
         <div className="inner-container">
-           
+                <div > {/*className="inner-content"*/}
+                      <p> 08/2020 - present</p>  
+                      <p> New York City, US</p>
+                </div>
+                <div className="inner-content" id="inner-width-mod">
+                  <div className="experience-title">
+                  <p><strong>Umbrella Inc.</strong></p>
+                  <p>UX &amp; UI Designer</p> {/*This ensures that the ampersand is rendered     correctly on the web page and doesn't interfere with HTML parsing*/}
+                  </div>
+          
+                  <p className="experience-details" >Supported senior researchers on accessibility standards for the open web. Created and usability tested wireframes and prototypes. Produced interactive documentation for quick onboarding of new researchers.</p>
+                </div>
+              </div>
+              
+              <div className="inner-container">
+                <div > {/*className="inner-content"*/}
+                      <p> 08/2020 - present</p>  
+                      <p> New York City, US</p>
+                </div>
+                <div className="inner-content" id="inner-width-mod">
+                  <div className="experience-title">
+                  <p><strong>Umbrella Inc.</strong></p>
+                  <p>UX &amp; UI Designer</p> {/*This ensures that the ampersand is rendered     correctly on the web page and doesn't interfere with HTML parsing*/}
+                  </div>
+          
+                  <p className="experience-details" >Supported senior researchers on accessibility standards for the open web. Created and usability tested wireframes and prototypes. Produced interactive documentation for quick onboarding of new researchers.</p>
+                </div>
+              </div>
+       
 
-            </div>
+
+
         </div>
 
 
