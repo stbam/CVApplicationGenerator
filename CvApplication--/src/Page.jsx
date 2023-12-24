@@ -19,6 +19,31 @@ const name=inputValue;
         </div>
       </div>
 
+        <div className="container">
+              <h1 className="sub-title">Education</h1>
+              <div className="inner-container">
+                <div className="inner-content">
+                      <p> 08/2020 - present</p>  
+                      <p> New York City, US</p>
+                </div>
+                
+                <div className="inner-content">
+                  <p><strong>London City University</strong></p>
+                  <p>Bachelors in Economics</p>     
+                </div>
+              </div>
+
+        </div>
+
+        <div className="container">
+        <h1 className="sub-title">Professional Experience</h1>
+        <div className="inner-container">
+           
+
+            </div>
+        </div>
+
+
       
     </>
   );

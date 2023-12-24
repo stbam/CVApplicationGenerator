@@ -16,11 +16,13 @@ html {
   padding-left: 15px;
   padding-right: 15px;
   box-sizing: border-box;
+  
 }
 .output-section {
-  background-color: #f0f0f0;
+  background-color: white;
   flex: 2; /*gives page twice as much space as the cards horizontally*/
   /* padding: 20px;*/
   box-sizing: border-box;
   border-radius: 10px;
+
 }
