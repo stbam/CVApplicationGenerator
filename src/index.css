@@ -1,15 +1,20 @@
 body,
 html {
+  display: flex;
+  flex-direction: row;
   margin: 0;
   padding: 0;
   height: 100%;
   background-color: gainsboro;
 }
 .main-container {
+display: flex;
+flex-direction: row;
 
   margin: 20px;
-  display: flex;
-  height: 100vh;
+ /* height: 100vh;  increases with to 100% of the screens viewport*/
+  flex: 1; /*takes up equal portion of available space available on x-axis*/
+
 }
 .input-section {
   flex: 1;
@@ -21,9 +26,11 @@ html {
 .output-section {
 
   background-color: white;
-  flex: 3; /*gives page twice as much space as the cards horizontally*/
+  flex: 2; /*gives page twice as much space as the cards horizontally*/
   /* padding: 20px;*/
   box-sizing: border-box;
   border-radius: 10px;
+
+
   
 }
