@@ -1,7 +1,7 @@
 import React from "react";
 import "./Education.css";
 
-function Education({ onSchoolNameChange,onDegreeChange}) {
+function Education({ onSchoolNameChange,onDegreeChange, onLocationChange,onEndDateChange,onStartDateChange}) {
   const onSchoolChange = (e) => {
     const newValue = e.target.value;
     //console.log(newValue);
@@ -10,6 +10,19 @@ function Education({ onSchoolNameChange,onDegreeChange}) {
 const onDegreeNameChange=(e)=>{
   const newValue=e.target.value;
 onDegreeChange(newValue)
+}
+
+const onLocationChanging=(e)=>{
+  const newValue=e.target.value;
+  onLocationChange(newValue)
+}
+const onendDateChange=(e)=>{
+  const newValue = e.target.value;
+  onEndDateChange(newValue)
+}
+const onstartDateChange=(e)=>{
+  const newValue=e.target.value;
+  onStartDateChange(newValue);
 }
 
   return (
@@ -27,15 +40,15 @@ onDegreeChange(newValue)
           </div>
           <div>
             <h2>Start Date:</h2>
-            <input type="text" className="input" />
+            <input type="text" className="input" onChange={onendDateChange}/>
           </div>
           <div>
             <h2>End Date:</h2>
-            <input type="text" className="input" />
+            <input type="text" className="input" onChange={onstartDateChange} />
           </div>
           <div>
             <h2>Location:</h2>
-            <input type="text" className="input" />
+            <input type="text" className="input" onChange={onLocationChanging} />
           </div>
         </div>
       </div>

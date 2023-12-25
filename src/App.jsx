@@ -13,7 +13,9 @@ function App() {
   const [locationValue, setLocationValue] = useState("London");
  const [schoolName,setSchoolName] = useState("London City University")
   const [degree,setDegree] = useState("Bachelors in Economics")
- 
+  const [startDate,setStartDate] = useState("08/2020")
+  const [endDate,setEndDate]=useState("present")
+  const [Location,setLocation]=useState("New York City, US")  
 
   const handleInputChange = (value) => {
     setInputValue(value);
@@ -24,15 +26,22 @@ function App() {
   const handleEmailChange = (value) => {
     setEmailValue(value);
   };
-  const handleLocationChange = (value) => {
-    setLocationValue(value);
-  };
   const handleSchoolNameChange=(value)=>{
     setSchoolName(value);
   }
   const handleDegreeChange=(value)=>{
     setDegree(value);
   }
+  const handleLocationChange = (value) => {
+    setLocation(value);
+  };
+
+const handleStartDateChange=(value)=>{
+  setStartDate(value);
+}
+const handleEndDateChange=(value)=>{
+  setEndDate(value);
+}
 
   return (
     <>
@@ -47,6 +56,10 @@ function App() {
 
           <Education onSchoolNameChange={handleSchoolNameChange}
                       onDegreeChange={handleDegreeChange}
+                      
+                      onLocationChange={handleLocationChange}
+                      onStartDateChange={handleStartDateChange}
+                      onEndDateChange={handleEndDateChange}
           />
           <Experience />
         </div>
@@ -58,7 +71,10 @@ function App() {
             emailValue={emailValue}
             locationValue={locationValue}
             schoolName={schoolName}
-            degree={degree}
+            degree={degree}      
+            startDate={startDate}
+            endDate={endDate}
+            Location={Location}
           />
 
           <ParentComponent />

@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import "./Page.css";
 
-function Page({ inputValue, PhoneNumber, emailValue, locationValue,schoolName,degree}) {
+function Page({ inputValue, PhoneNumber, emailValue, locationValue,schoolName,degree,startDate,endDate,Location}) {
   //A section to add your educational experience (school name, title of study and date of study)
   const name = inputValue;
-  //console.log(name+"new")
+  //console.log(name+"new")    
   //console.log(PhoneNumber +"new")
   return (
     <>
@@ -21,8 +21,8 @@ function Page({ inputValue, PhoneNumber, emailValue, locationValue,schoolName,de
         <h1 className="sub-title">Education</h1>
         <div className="inner-container">
           <div className="inner-content">
-            <p> 08/2020 - present </p>
-            <p> New York City, US</p>
+            <p> {startDate} - {endDate} </p>
+            <p> {Location}</p>
           </div>
 
           <div className="inner-content">
