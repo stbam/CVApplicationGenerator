@@ -19,40 +19,34 @@
   justify-content: center;
   gap: 10px;
 }
-.container{
- 
+.container {
   margin: auto;
   text-align: center;
   padding: 20px;
 
 }
-.inner-content{
+.inner-content {
   text-align: center;
   flex-grow: 2;
-
 }
-p{
+p {
   margin: 0;
   text-align: left;
-  
 }
-.sub-title{
-  background-color:rgb(0 52 82 / 7%);
+.sub-title {
+  background-color: rgb(0 52 82 / 7%);
 }
-.inner-container{
+.inner-container {
   display: flex;
   gap: 10px;
-/*padding: 20px;*/
+  /*padding: 20px;*/
 }
 
-#inner-width-mod{
+#inner-width-mod {
   width: 40%;
 }
 
-.experience-title{
-
+.experience-title {
 }
-.experience-details{
-   
-
+.experience-details {
 }

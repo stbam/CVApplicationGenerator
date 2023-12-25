@@ -6,6 +6,7 @@ html {
   background-color: gainsboro;
 }
 .main-container {
+
   margin: 20px;
   display: flex;
   height: 100vh;
@@ -16,13 +17,13 @@ html {
   padding-left: 15px;
   padding-right: 15px;
   box-sizing: border-box;
-  
 }
 .output-section {
+
   background-color: white;
-  flex: 2; /*gives page twice as much space as the cards horizontally*/
+  flex: 3; /*gives page twice as much space as the cards horizontally*/
   /* padding: 20px;*/
   box-sizing: border-box;
   border-radius: 10px;
-
+  
 }
