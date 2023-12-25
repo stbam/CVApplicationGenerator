@@ -11,6 +11,9 @@ function App() {
   const [PhoneNumber, setPhoneNumber] = useState("(xxx)-xxx-xxxx");
   const [emailValue, setEmailValue] = useState("@gmail.com");
   const [locationValue, setLocationValue] = useState("London");
+ const [schoolName,setSchoolName] = useState("London City University")
+  const [degree,setDegree] = useState("Bachelors in Economics")
+ 
 
   const handleInputChange = (value) => {
     setInputValue(value);
@@ -24,6 +27,13 @@ function App() {
   const handleLocationChange = (value) => {
     setLocationValue(value);
   };
+  const handleSchoolNameChange=(value)=>{
+    setSchoolName(value);
+  }
+  const handleDegreeChange=(value)=>{
+    setDegree(value);
+  }
+
   return (
     <>
       <div className="main-container">
@@ -34,7 +44,10 @@ function App() {
             onEmailChange={handleEmailChange}
             onLocationChange={handleLocationChange}
           />
-          <Education />
+
+          <Education onSchoolNameChange={handleSchoolNameChange}
+                      onDegreeChange={handleDegreeChange}
+          />
           <Experience />
         </div>
 
@@ -44,6 +57,8 @@ function App() {
             PhoneNumber={PhoneNumber}
             emailValue={emailValue}
             locationValue={locationValue}
+            schoolName={schoolName}
+            degree={degree}
           />
 
           <ParentComponent />
