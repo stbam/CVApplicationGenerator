@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Page.css";
 
-function Page({ inputValue, PhoneNumber, emailValue, locationValue,schoolName,degree,startDate,endDate,Location}) {
+function Page({ inputValue, PhoneNumber, emailValue, locationValue,schoolName,degree,startDate,endDate,Location,newExperience,newCompanyName,newPositionTitle,newLocation,newStartDate,newEndDate}) {
   //A section to add your educational experience (school name, title of study and date of study)
   const name = inputValue;
   //console.log(name+"new")    
@@ -41,24 +41,21 @@ function Page({ inputValue, PhoneNumber, emailValue, locationValue,schoolName,de
           <div>
             {" "}
             {/*className="inner-content"*/}
-            <p> 08/2020 - present</p>
+            <p> {newStartDate} - {newEndDate}</p>
             <p> New York City, US</p>
           </div>
           
           <div className="inner-content" id="inner-width-mod">
             <div className="experience-title">
               <p>
-                <strong>Umbrella Inc.</strong>
+                <strong>{newCompanyName}</strong>
               </p>
-              <p>UX &amp; UI Designer</p>{" "}
+              <p>{newExperience}</p>{" "}
               {/*This ensures that the ampersand is rendered     correctly on the web page and doesn't interfere with HTML parsing*/}
             </div>
 
-            <p className="experience-details">
-              Supported senior researchers on accessibility standards for the
-              open web. Created and usability tested wireframes and prototypes.
-              Produced interactive documentation for quick onboarding of new
-              researchers.
+            <p className="experience-details"> {newPositionTitle} 
+            
             </p>
           </div>
         </div>
@@ -67,8 +64,8 @@ function Page({ inputValue, PhoneNumber, emailValue, locationValue,schoolName,de
           <div>
             {" "}
             {/*className="inner-content"*/}
-            <p> 08/2020 - present</p>
-            <p> New York City, US</p>
+            <p> 08/2020 - present </p>
+            <p> {newLocation}</p>
           </div>
           <div className="inner-content" id="inner-width-mod">
             <div className="experience-title">

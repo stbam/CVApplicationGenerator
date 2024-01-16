@@ -24,9 +24,14 @@ function App() {
   const [Location,setLocation]=useFormInput("New York City, US")  
 
 
-const[Experience,setExperience] =useFormInput("Professional Experience")
-/* ------------------------------------------------------------------*/
+const[newExperience,setNewExperience] =useFormInput("UX & UI Designer")
+const [newCompanyName,setNewCompanyName]=useFormInput("Umbrella Inc.") 
+const [newPositionTitle,setNewPositionTitle]=useFormInput("Supported senior researchers on accessibility standards for the open web. Created and usability tested wireframes and prototypes. Produced interactive documentation for quick onboarding of new researchers.")  
+const [newLocation,setNewLocation] = useFormInput('New York City, US ')
 
+const [newStartDate,newsStStartDate] = useFormInput("08/2020")
+const [newEndDate,newSetEndDate]=useFormInput("present")
+/* ------------------------------------------------------------------*/
 
   return (
     <>
@@ -45,11 +50,22 @@ const[Experience,setExperience] =useFormInput("Professional Experience")
                       onStartDateChange={setStartDate}
                       onEndDateChange={setEndDate}
           />
-          
+          <Experience
+              onExperienceChange = {setNewExperience}
+              onNewCompanyNameChange={setNewCompanyName}   
+            onNewPositionTitle  ={setNewPositionTitle}
+            onNewLocation = {setNewLocation}
+          onNewStartDate = {newsStStartDate}
+           onNewEndDate= {newSetEndDate}     
+          />
         </div>
         <div className="output-section">
           <Page
-           
+          newEndDate = {newEndDate}
+          newStartDate = {newStartDate}
+          newPositionTitle={newPositionTitle}
+          newCompanyName={newCompanyName}
+           newExperience={newExperience}
             inputValue={inputValue}
             PhoneNumber={PhoneNumber}
             emailValue={emailValue}
@@ -59,6 +75,7 @@ const[Experience,setExperience] =useFormInput("Professional Experience")
             startDate={startDate}
             endDate={endDate}
             Location={Location}
+            newLocation={newLocation}
           />
           <ParentComponent />
         </div>
