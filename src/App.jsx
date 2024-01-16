@@ -24,7 +24,9 @@ function App() {
   const [Location,setLocation]=useFormInput("New York City, US")  
 
 
+const[Experience,setExperience] =useFormInput("Professional Experience")
 /* ------------------------------------------------------------------*/
+
 
   return (
     <>
@@ -43,10 +45,11 @@ function App() {
                       onStartDateChange={setStartDate}
                       onEndDateChange={setEndDate}
           />
-          <Experience />
+          
         </div>
         <div className="output-section">
           <Page
+           
             inputValue={inputValue}
             PhoneNumber={PhoneNumber}
             emailValue={emailValue}

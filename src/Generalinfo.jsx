@@ -29,13 +29,31 @@ function GeneralInfo({
     const newLocationValue = e.target.value;
     onLocationChange(newLocationValue);
   };
+  function handlePrint() {
+    const printableContent = document.getElementsByClassName('output-section')[0].innerHTML;
+    const printWindow = window.open('', '_blank');
+    printWindow.document.write('<html><head><title>Print</title></head><body>');
+    printWindow.document.write('<link rel="stylesheet" type="text/css" href="Generalinfo.css">')
+    printWindow.document.write('<link rel="stylesheet" type="text/css" href="left-side-font.css">')
+    printWindow.document.write(printableContent);
+    printWindow.document.write('</body></html>');
+    printWindow.focus();
+    setTimeout(function(){printWindow.print();},1000);
+    printWindow.document.close();
 
+    
+  }
+  
   //A section to add general information like name, email and phone number.
   return (
     <>
       <div className="personal-details">
         <div className="inner-card">
-          <h1>Personal Details </h1>
+          <div className="card-title">
+            <h1>Personal Details </h1>
+            <h3 id="print" onClick={handlePrint}>Print</h3>
+          </div>
+         
           <div>
             <h2>Name:{inputValue}</h2>
             <input

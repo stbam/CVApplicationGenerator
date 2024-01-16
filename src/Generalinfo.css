@@ -15,3 +15,14 @@
   width: 100%;
   min-height: 30px;
 }
+.card-title{
+  display: flex;
+ 
+  justify-content: space-between;
+}
+#print{
+  background-color: rgb(201, 16, 16); color: white;  width: 70px; text-align: center; border-radius: 7px;cursor: pointer; user-select: none; margin: auto;
+}
+#print:hover{
+  background-color: red;
+}
