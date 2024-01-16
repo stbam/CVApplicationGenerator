@@ -6,64 +6,45 @@ import Page from "./Page.jsx";
 import { useState } from "react";
 import ParentComponent from "./ParentComponent.jsx";
 
+  const useFormInput=(initialValue)=>{
+      const [value,setValue]=useState(initialValue);
+      const handleChange= (newValue)=>setValue(newValue);
+      return [value,handleChange];
+    } /* implemented custom hook to reduce the repetition of the same function*/
+
 function App() {
-  const [inputValue, setInputValue] = useState("Bob Hoskins"); //default value
-  const [PhoneNumber, setPhoneNumber] = useState("(xxx)-xxx-xxxx");
-  const [emailValue, setEmailValue] = useState("@gmail.com");
-  const [locationValue, setLocationValue] = useState("London");
- const [schoolName,setSchoolName] = useState("London City University")
-  const [degree,setDegree] = useState("Bachelors in Economics")
-  const [startDate,setStartDate] = useState("08/2020")
-  const [endDate,setEndDate]=useState("present")
-  const [Location,setLocation]=useState("New York City, US")  
+  const [inputValue, setInputValue] = useFormInput("Bob Hoskins"); //default value
+  const [PhoneNumber, setPhoneNumber] = useFormInput("(xxx)-xxx-xxxx");
+  const [emailValue, setEmailValue] = useFormInput("@gmail.com");
+  const [locationValue, setLocationValue] = useFormInput("London");
+ const [schoolName,setSchoolName] = useFormInput("London City University")
+  const [degree,setDegree] = useFormInput("Bachelors in Economics")
+  const [startDate,setStartDate] = useFormInput("08/2020")
+  const [endDate,setEndDate]=useFormInput("present")
+  const [Location,setLocation]=useFormInput("New York City, US")  
 
-  const handleInputChange = (value) => {
-    setInputValue(value);
-  };
-  const handlePhoneNumber = (value) => {
-    setPhoneNumber(value);
-  };
-  const handleEmailChange = (value) => {
-    setEmailValue(value);
-  };
-  const handleSchoolNameChange=(value)=>{
-    setSchoolName(value);
-  }
-  const handleDegreeChange=(value)=>{
-    setDegree(value);
-  }
-  const handleLocationChange = (value) => {
-    setLocation(value);
-  };
 
-const handleStartDateChange=(value)=>{
-  setStartDate(value);
-}
-const handleEndDateChange=(value)=>{
-  setEndDate(value);
-}
+/* ------------------------------------------------------------------*/
 
   return (
     <>
       <div className="main-container">
         <div className="input-section">
           <GeneralInfo
-            onInputChange={handleInputChange}
-            onPhoneNumberChange={handlePhoneNumber}
-            onEmailChange={handleEmailChange}
-            onLocationChange={handleLocationChange}
+            onInputChange={setInputValue}
+            onPhoneNumberChange={setPhoneNumber}
+            onEmailChange={setEmailValue}
+            onLocationChange={setLocationValue}
           />
-
-          <Education onSchoolNameChange={handleSchoolNameChange}
-                      onDegreeChange={handleDegreeChange}
+          <Education onSchoolNameChange={setSchoolName}
+                      onDegreeChange={setDegree}
                       
-                      onLocationChange={handleLocationChange}
-                      onStartDateChange={handleStartDateChange}
-                      onEndDateChange={handleEndDateChange}
+                      onLocationChange={setLocation}
+                      onStartDateChange={setStartDate}
+                      onEndDateChange={setEndDate}
           />
           <Experience />
         </div>
-
         <div className="output-section">
           <Page
             inputValue={inputValue}
@@ -76,7 +57,6 @@ const handleEndDateChange=(value)=>{
             endDate={endDate}
             Location={Location}
           />
-
           <ParentComponent />
         </div>
       </div>

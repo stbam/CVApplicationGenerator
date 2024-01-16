@@ -1,5 +1,6 @@
 import { useState } from "react";
-import "./App.css";
+import "./Generalinfo.css";
+import "./left-side-font.css";
 
 function GeneralInfo({
   inputValue,
@@ -42,6 +43,7 @@ function GeneralInfo({
               className="input"
               value={inputValue}
               onChange={onChangeHandle}
+              placeholder="First and Last Name"
             />
           </div>
 
@@ -51,6 +53,7 @@ function GeneralInfo({
               type="text"
               className="input"
               onChange={onEmailChangeHandle}
+              placeholder="Enter email"
             />
           </div>
 
@@ -61,6 +64,7 @@ function GeneralInfo({
               className="input"
               value={PhoneNumber}
               onChange={onPhoneNumberChangeHandle}
+              placeholder="Enter phone number"
             />
           </div>
 
@@ -70,6 +74,7 @@ function GeneralInfo({
               type="text"
               className="input"
               onChange={onLocationChangeHandle}
+              placeholder = "Enter location"
             />
           </div>
         </div>

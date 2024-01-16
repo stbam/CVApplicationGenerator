@@ -32,23 +32,49 @@ const onstartDateChange=(e)=>{
           <div>
             <h2>School name:</h2>
             {/* Use onSchoolChange as the onChange handler */}
-            <input type="text" className="input" onChange={onSchoolChange} />
+            <input type="text" 
+            className="input" 
+            onChange={onSchoolChange}
+            placeholder = "Enter school name"
+            
+            />
+            
           </div>
           <div>
             <h2>Degree: </h2>
-            <input type="text" className="input" onChange={onDegreeNameChange} />
+            <input type="text"
+             className="input" 
+             onChange={onDegreeNameChange}
+             placeholder="Enter degree name"
+             
+             />
           </div>
           <div>
             <h2>Start Date:</h2>
-            <input type="text" className="input" onChange={onendDateChange}/>
+            <input type="text" 
+            className="input" 
+            onChange={onendDateChange}
+            placeholder="Enter start date"
+            
+            />
           </div>
           <div>
             <h2>End Date:</h2>
-            <input type="text" className="input" onChange={onstartDateChange} />
+            <input type="text" 
+            className="input"
+             onChange={onstartDateChange}
+             placeholder="Enter end date"
+             
+             />
           </div>
           <div>
             <h2>Location:</h2>
-            <input type="text" className="input" onChange={onLocationChanging} />
+            <input type="text" 
+            className="input" 
+            onChange={onLocationChanging} 
+            placeholder="Enter Location"
+            
+            />
           </div>
         </div>
       </div>

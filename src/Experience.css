@@ -2,3 +2,16 @@
   background-color: white;
   border-radius: 10px;
 }
+.dates{
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+  flex-wrap: wrap;
+ flex: auto;
+}
+.individ-date{
+  flex:1;
+}
+.input{
+  
+}
